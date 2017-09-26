@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul ul{
+			display: none;
+		}
+        li{
+            list-style-type: none;
+        }
+        .red{
+        	display: block;
+        }
+	</style>
+    <script src="jquery-1.11.3.min.js"></script>
+    //引用JQ包
+    <script type="text/javascript">
+        $(function(){
+            $('.navLink').click(function(){
+                var index=$('.navLink').index(this);
+                 $('.menu').eq(index).css('display','block');
+           })
+        })
+    </script>
+</head>
+<body>
+<ul id="nav" style='display:block' >
+    <li><a  href="#" class="navLink">路猫首页</a></li>
+    <ul class="menu" style='display:none' >
+        <li><a href="#" class="menuLink">网站介绍</a></li>
+        <li><a href="#" class="menuLink">精品套餐</a></li>
+        <li><a href="#" class="menuLink">路猫特色</a></li>
+        <li><a href="#" class="menuLink">免费试听</a></li>
+    </ul>
+    <li><a  href="#" class="navLink">关于路猫</a></li>
+    <ul class="menu" style='display:none' >
+        <li><a href="#" class="menuLink">团队介绍</a></li>
+        <li><a href="#" class="menuLink">路猫成员</a></li>
+        <li><a href="#" class="menuLink">想说的话</a></li>
+        <li><a href="#" class="menuLink">寻觅高手</a></li>
+    </ul>
+    <li ><a href="#" class="navLink">技术套餐</a></li>
+    <ul  class="menu" style='display:none' >
+        <li><a href="#" class="menuLink">CSS课程</a></li>
+        <li><a href="#" class="menuLink">PHP课程</a></li>
+        <li><a href="#" class="menuLink">AS3.0课程</a></li>
+        <li><a href="#" class="menuLink">课程说明</a></li>
+    </ul>
+    <li ><a  href="#" class="navLink">路猫特色</a></li>
+    <ul  class="menu" style='display:none' >
+        <li><a href="#" class="menuLink">单独授课</a></li>
+        <li><a href="#" class="menuLink">按需订制</a></li>
+        <li><a href="#" class="menuLink">招聘要求</a></li>
+        <li><a href="#" class="menuLink">愉悦体验</a></li>
+    </ul>
+    <li ><a  href="#" class="navLink">路猫资料库</a></li>
+    <ul  class="menu" style='display:none' >
+        <li><a href="#" class="menuLink">CSS</a></li>
+        <li><a href="#" class="menuLink">AS3</a></li>
+        <li><a href="#" class="menuLink">JavaScript</a></li>
+        <li><a href="#" class="menuLink">PHP</a></li>
+    </ul>
+    <li ><a  href="#" class="navLink">联系路猫</a></li>
+    <ul  class="menu" style='display:none' >
+        <li><a href="#" class="menuLink">QQ</a></li>
+        <li><a href="#" class="menuLink">MSN</a></li>
+        <li><a href="#" class="menuLink">手机</a></li>
+        <li><a href="#" class="menuLink">地址</a></li>
+    </ul>
+</ul>
+</body>
+</html>
