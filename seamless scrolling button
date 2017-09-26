@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>无缝滚动</title>
+	<meta charset="UTF-8"/>
+	<style type="text/css">
+	*{padding:0;margin:0;}
+		div{position: relative;border:10px solid black;width:500px;height: 200px;margin:30px auto;/*overflow:hidden;*/}
+		div ul{position: absolute;}
+		div ul li{list-style: none;float: left;width:100px;height:200px;}
+		div ul .li1{background:red;}
+		div ul .li2{background:#f0f;}
+		div ul .li3{background:#ff0;}
+		div ul .li4{background:green;}
+		div ul .li5{background:blue;}
+		p{text-align:center;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+		var oul=document.getElementsByTagName('ul')[0];
+		var ali=oul.getElementsByTagName('li');
+		var btn=document.getElementsByTagName('input');
+		var timer=null;
+		oul.innerHTML+=oul.innerHTML;
+		oul.style.width=ali[0].offsetWidth*ali.length+'px';
+		function iscroll(speed){
+			clearInterval(timer);
+			timer=setInterval(function(){
+				
+			oul.style.left=oul.offsetLeft+speed+'px';
+			if(oul.offsetLeft<-oul.offsetWidth/2){
+				oul.style.left=0;
+			}
+			if(oul.offsetLeft>0){
+				oul.style.left=-oul.offsetWidth/2+'px';
+			}
+		},10)
+		}
+			btn[0].onclick=function(){
+				iscroll(-1);
+			}
+			btn[1].onclick=function(){
+				clearInterval(timer);
+			}
+			btn[2].onclick=function(){
+				iscroll(1);
+			}
+		}
+	
+	</script>
+</head>
+<body>
+<div>
+	<ul>
+		<li class="li1"></li>
+		<li class="li2"></li>
+		<li class="li3"></li>
+		<li class="li4"></li>
+		<li class="li5"></li>
+	</ul>
+</div>
+<p>
+	<input type="button" value="向左">
+	<input type="button" value="停止">
+	<input type="button" value="向右">
+</p>
+</body>
+</html>
