@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>背景引入轮播图</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var aImg=document.getElementsByTagName('img')[0];
+			var i=1;
+			setInterval(function(){
+				if(i==4){
+				i=1;
+			}else{
+				i++;
+			}
+			aImg.src='images/'+i+'.jpg';
+			},1000)
+		}	
+	</script>
+</head>
+<body style="text-align: center;margin:100px auto">
+<a href="#javascript"><img src="images/1.jpg"border="10"/></a>
+</body>
+</html>
